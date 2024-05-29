@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Rays: A Celestial Hitchhiker's Guide to Danger</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif; 
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #content {
+            z-index: 1;
+            max-width: 800px;
+            background-color: rgba(75, 0, 130, 0.15); 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            overflow-y: auto; /* Add scrollability */
+            max-height: calc(100% - 100px); /* Adjust max-height to fit the viewport */
+        }
+        #title {
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        #description {
+            margin: 0 20px;
+            font-size: 1.5em;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #more-info-buttons {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="ire.mp4" type="video/mp4">
+    </video>
+    <div id="content">
+        <h1 id="title">Cosmic Rays: A Celestial Hitchhiker's Guide to Danger</h1>
+        <h3 id="description">
+            Solar flares and CMEs release high-energy particles that can penetrate Earth's atmosphere. This can lead to increased radiation exposure for airline passengers and crew on high-altitude polar flights, as well as posing risks to astronauts in space. Enhanced radiation levels can affect human health and necessitate protective measures.<br><br>
+            Imagine soaring through the clouds, a world of fluffy white beneath your wings. Suddenly, the cockpit alarms blare, warning of a surge in radiation. It's not a scene from a sci-fi film; it's a real possibility during a solar storm. When the sun throws a tantrum, unleashing solar flares and coronal mass ejections (CMEs), Earth is bombarded with high-energy particles. These cosmic hitchhikers pierce through the atmosphere, posing a health risk for airline passengers and crew on high-altitude polar flights. Astronauts venturing beyond the protective bubble of Earth become especially vulnerable. This increased radiation exposure can disrupt vital biological processes, making necessary precautions like route changes and protective gear crucial for those who travel beyond the comfort of our planet's atmosphere. The next time you gaze at the sun, remember – its brilliance can be a double-edged sword.
+        </h3>
+        <div id="buttons">
+            <button class="button" id="dive-deeper">Re-read</button>
+            <button class="button" id="maybe-next-time">Back to home</button>
+        </div>
+        <div id="more-info-buttons">
+            <button class="button" onclick="location.href='1.html'">Generalization</button>
+            <button class="button" onclick="location.href='aurora.html'">Aurora</button>
+            <button class="button" onclick="location.href='satellite.html'">Satellites Disruption</button>
+            <button class="button" onclick="location.href='pgd.html'">Power Grid Failure</button>
+            <button class="button" onclick="location.href='rci.html'">Radio Communication Interference</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('dive-deeper').addEventListener('click', function() {
+            document.getElementById('title').innerText = 'IMPACTS';
+            document.getElementById('description').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('more-info-buttons').style.display = 'flex';
+        });
+
+        document.getElementById('maybe-next-time').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

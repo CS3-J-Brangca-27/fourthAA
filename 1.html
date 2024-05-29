@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impact of Solar Activities on Earth</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #content {
+            z-index: 1;
+            max-width: 800px;
+            background-color: rgba(0, 0, 255, 0.15); 
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #title {
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        #description {
+            margin: 0 20px;
+            font-size: 1.5em;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #more-info-buttons {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="earth.mp4" type="video/mp4">
+    </video>
+    <div id="content">
+        <h1 id="title">Solar Storms: Nature's Celestial Fury</h1>
+        <h3 id="description">
+            The sun, our life-giving star, can also unleash a tempestuous side. Solar storms, colossal eruptions of charged particles and radiation, hurtle towards Earth at breakneck speeds. When these storms collide with our planet's magnetic field, the impact can be electrifying. Auroras dance wildly across the night sky, a mesmerizing display masking the potential chaos below. Power grids can buckle under the surge of energy, plunging entire cities into darkness. Communication systems sputter and die, leaving us isolated and vulnerable. These solar storms are a stark reminder of our dependence on a star that can be both benevolent and belligerent.
+        </h3>
+        <div id="buttons">
+            <button class="button" id="dive-deeper">Dive Deeper</button>
+            <button class="button" id="maybe-next-time">Maybe Next Time</button>
+        </div>
+        <div id="more-info-buttons">
+            <button class="button" onclick="location.href='aurora.html'">Aurora</button>
+            <button class="button" onclick="location.href='satellite.html'">Satellites Disruption</button>
+            <button class="button" onclick="location.href='pgd.html'">Power Grid Failure</button>
+            <button class="button" onclick="location.href='rdi.html'">Radio Communication Interference</button>
+            <button class="button" onclick="location.href='ire.html'">Increased Radiation Exposure</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('dive-deeper').addEventListener('click', function() {
+            document.getElementById('title').innerText = 'IMPACTS';
+            document.getElementById('description').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('more-info-buttons').style.display = 'flex';
+        });
+
+        document.getElementById('maybe-next-time').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

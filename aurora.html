@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celestial Fireworks: A Dazzling Display with Hidden Bite</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif; 
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #content {
+            z-index: 1;
+            max-width: 800px;
+            background-color: rgba(230, 230, 250, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #title {
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        #description {
+            margin: 0 20px;
+            font-size: 1.5em;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #more-info-buttons {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="aurora.mp4" type="video/mp4">
+    </video>
+    <div id="content">
+        <h1 id="title">Celestial Fireworks: A Dazzling Display with Hidden Bite</h1>
+        <h3 id="description">
+            High above our planet, a cosmic ballet unfolds. Solar winds, charged particles streaming from the sun, collide with Earth's magnetic field. This celestial tango ignites the night sky, birthing the breathtaking auroras – the Aurora Borealis in the north and its southern counterpart, Aurora Australis. These vibrant curtains of light, a kaleidoscope of greens, pinks, and purples, are a mesmerizing spectacle. <br><br>
+
+            But beneath the beauty lies a hidden bite. Auroras are a warning sign, a flicker of the sun's fiery temper. Their intensity can be a gauge for increased solar activity, potentially leading to disruptions in communication and power grids. While we marvel at the celestial fireworks, it's a crucial reminder: the sun, our life-giving star, can also be a force to be reckoned with.
+        </h3>
+        <div id="buttons">
+            <button class="button" id="dive-deeper">Dive Deeper</button>
+            <button class="button" id="maybe-next-time">Maybe Next Time</button>
+        </div>
+        <div id="more-info-buttons">
+            <button class="button" onclick="location.href='1.html'">Generalization</button>
+            <button class="button" onclick="location.href='satellite.html'">Satellites Disruption</button>
+            <button class="button" onclick="location.href='pgd.html'">Power Grid Failure</button>
+            <button class="button" onclick="location.href='rdi.html'">Radio Communication Interference</button>
+            <button class="button" onclick="location.href='ire.html'">Increased Radiation Exposure</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('dive-deeper').addEventListener('click', function() {
+            document.getElementById('title').innerText = 'IMPACTS';
+            document.getElementById('description').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('more-info-buttons').style.display = 'flex';
+        });
+
+        document.getElementById('maybe-next-time').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

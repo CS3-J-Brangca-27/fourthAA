@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Grid Meltdown: When the Sun Flips the Switch</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Arial', sans-serif; 
+            overflow: hidden;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px;
+        }
+        #video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        #content {
+            z-index: 1;
+            max-width: 800px;
+            background-color: rgba(150, 255, 0, 0.15);
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        #title {
+            margin-bottom: 5px;
+            font-size: 2.5em;
+        }
+        #description {
+            margin: 0 20px;
+            font-size: 1.5em;
+        }
+        #buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #1e90ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: white;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        #more-info-buttons {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <video id="video-background" autoplay muted loop>
+        <source src="pgd.mp4" type="video/mp4">
+    </video>
+    <div id="content">
+        <h1 id="title">Power Grid Meltdown: When the Sun Flips the Switch</h1>
+        <h3 id="description">
+            Imagine a silent city, plunged into darkness without warning. Traffic lights flicker and die, buildings stand as hulking silhouettes, and the comforting hum of electricity fades into an unsettling silence. This isn't a Hollywood disaster movie; it's the chilling reality of a solar storm-induced power grid meltdown. <br><br>
+
+            When the sun unleashes a geomagnetic storm, a surge of charged particles disrupts Earth's magnetic field. This, in turn, induces electrical currents in power lines – currents powerful enough to overload the entire grid. Transformers, the vital organs of the power grid, groan under the strain, potentially exploding and leaving entire regions in the dark. Hospitals scramble to maintain critical equipment on backup generators, communication networks falter, and the rhythm of modern life grinds to a halt. These solar storms are a sobering reminder that our dependence on technology hangs precariously on the whims of a distant star.
+        </h3>
+        <div id="buttons">
+            <button class="button" id="dive-deeper">Dive Deeper</button>
+            <button class="button" id="maybe-next-time">Maybe Next Time</button>
+        </div>
+        <div id="more-info-buttons">
+            <button class="button" onclick="location.href='1.html'">Generalization</button>
+            <button class="button" onclick="location.href='aurora.html'">Aurora</button>
+            <button class="button" onclick="location.href='satellite.html'">Satellites Disruption</button>
+            <button class="button" onclick="location.href='rdi.html'">Radio Communication Interference</button>
+            <button class="button" onclick="location.href='ire.html'">Increased Radiation Exposure</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('dive-deeper').addEventListener('click', function() {
+            document.getElementById('title').innerText = 'IMPACTS';
+            document.getElementById('description').style.display = 'none';
+            document.getElementById('buttons').style.display = 'none';
+            document.getElementById('more-info-buttons').style.display = 'flex';
+        });
+
+        document.getElementById('maybe-next-time').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
